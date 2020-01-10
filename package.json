@@ -1,0 +1,15 @@
+{
+  "name": "password-regexp",
+  "version": "1.0.0",
+  "description": "A simple tool for easy creating regexp expression for checking password strength",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "malahov.dmitry@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*"
+  }
+}
