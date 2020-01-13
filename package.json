@@ -6,8 +6,17 @@
   "scripts": {
     "test": "mocha"
   },
-  "author": "malahov.dmitry@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/red-sight/password-regexp.git"
+  },
+  "keywords": ["regexp", "password", "validation", "nodejs"],
+  "author": "Dmitry Malakhov malahov.dmitry@gmail.com",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/red-sight/password-regexp/issues"
+  },
+  "homepage": "https://github.com/red-sight/password-regexp",
   "devDependencies": {
     "mocha": "*",
     "chai": "*"
