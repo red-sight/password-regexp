@@ -1,10 +1,10 @@
-const regExpPwd = require('../index.js').regExpPwd
+const passwordRegexp = require('../index.js')
 const expect = require('chai').expect;
 
-describe('regExpPwd', function () {
+describe('passwordRegexp', function () {
 
     it('Should be a regExp', function () {
-        expect(regExpPwd() instanceof RegExp).to.be.true
+        expect(passwordRegexp() instanceof RegExp).to.be.true
     })
 
     it('Should return a default expression: \n\
@@ -24,7 +24,7 @@ describe('regExpPwd', function () {
             'Space symbol is not restricted'
         ]
         for (let i = 0; i <= passwords.length; i++) {
-            expect(regExpPwd().test(passwords[i])).to.be.false
+            expect(passwordRegexp().test(passwords[i])).to.be.false
         }
     })
 
@@ -32,7 +32,7 @@ describe('regExpPwd', function () {
 
         let testMinMax = (min, max, passwords, check) => {
             for (let i = 0; i < passwords.length; i++) {
-                expect(regExpPwd({
+                expect(passwordRegexp({
                     min,
                     max
                 }).test(passwords[i])).to.equal(check)
@@ -64,7 +64,7 @@ describe('regExpPwd', function () {
         ]
 
         for (let i = 0; i < passwords.length; i++) {
-            expect(regExpPwd({
+            expect(passwordRegexp({
                 numeric: false
             }).test(passwords[i])).to.be.true
         }
@@ -80,7 +80,7 @@ describe('regExpPwd', function () {
         ]
 
         for (let i = 0; i < passwords.length; i++) {
-            expect(regExpPwd({
+            expect(passwordRegexp({
                 uppercase: false
             }).test(passwords[i])).to.be.true
         }
@@ -91,7 +91,7 @@ describe('regExpPwd', function () {
 
         let testSymbols = function (passwords, symbols, check) {
             for (let i = 0; i < passwords.length; i++) {
-                expect(regExpPwd({
+                expect(passwordRegexp({
                     symbols
                 }).test(passwords[i])).to.equal(check)
             }

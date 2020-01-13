@@ -10,11 +10,11 @@ npm install password-regexp
 ### Usage
 
 ```js
-const regExpPwd = require('../index.js').regExpPwd()
+const passwordRegexp = require('password-regexp')()
 
-regExpPwd.test('abc123') // returns false
+passwordRegexp.test('abc123') // returns false
 
-regExpPwd.test('Strong12') // returns true
+passwordRegexp.test('Strong12') // returns true
 
 ```
 
@@ -29,7 +29,9 @@ By default, it generates a RegExp, that check a string value that match:
 These conditions are customizable by function atrributes:
 
 ```js
-const regExpPwd = require('../index.js').regExpPwd({
+const passwordRegexp = require('password-regexp')
+
+const customRegexp = passwordRegexp({
     min: 12,
     max: 18,
     numeric: false,

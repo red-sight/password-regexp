@@ -1,6 +1,6 @@
 'use strict'
 
-exports.regExpPwd = (input) => {
+module.exports = (input) => {
 
   let exp = "^(?=.*[a-z])"
 
