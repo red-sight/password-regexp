@@ -2,6 +2,11 @@
 
 A simple function that generates the RegExp expression for passwords validation.
 
+### Installation
+```
+npm install password-regexp
+```
+
 ### Usage
 
 ```js
