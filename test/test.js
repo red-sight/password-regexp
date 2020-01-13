@@ -1,10 +1,10 @@
-const regExp = require('../index.js').regExp
+const regExpPwd = require('../index.js').regExpPwd
 const expect = require('chai').expect;
 
-describe('regExp', function () {
+describe('regExpPwd', function () {
 
     it('Should be a regExp', function () {
-        expect(regExp() instanceof RegExp).to.be.true
+        expect(regExpPwd() instanceof RegExp).to.be.true
     })
 
     it('Should return a default expression: \n\
@@ -20,10 +20,11 @@ describe('regExp', function () {
             'FGgh677',
             'FGgh677uiytrewsdfghjklmnbvcxzsdff',
             '!@#$%^&t',
-            'ПрыведП%56'
+            'ПрыведП%56',
+            'Space symbol is not restricted'
         ]
         for (let i = 0; i <= passwords.length; i++) {
-            expect(regExp().test(passwords[i])).to.be.false
+            expect(regExpPwd().test(passwords[i])).to.be.false
         }
     })
 
@@ -31,7 +32,7 @@ describe('regExp', function () {
 
         let testMinMax = (min, max, passwords, check) => {
             for (let i = 0; i < passwords.length; i++) {
-                expect(regExp({
+                expect(regExpPwd({
                     min,
                     max
                 }).test(passwords[i])).to.equal(check)
@@ -58,12 +59,12 @@ describe('regExp', function () {
 
         let passwords = [
             'FghhjhhgG',
-            '012345Gy',
+            '012345Gy', // numbers are not necessary now, but also not restricted
             'GhTyghghgGHG'
         ]
 
         for (let i = 0; i < passwords.length; i++) {
-            expect(regExp({
+            expect(regExpPwd({
                 numeric: false
             }).test(passwords[i])).to.be.true
         }
@@ -79,7 +80,7 @@ describe('regExp', function () {
         ]
 
         for (let i = 0; i < passwords.length; i++) {
-            expect(regExp({
+            expect(regExpPwd({
                 uppercase: false
             }).test(passwords[i])).to.be.true
         }
@@ -90,7 +91,7 @@ describe('regExp', function () {
 
         let testSymbols = function (passwords, symbols, check) {
             for (let i = 0; i < passwords.length; i++) {
-                expect(regExp({
+                expect(regExpPwd({
                     symbols
                 }).test(passwords[i])).to.equal(check)
             }
