@@ -1,6 +1,6 @@
 {
   "name": "password-regexp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple tool for easy creating regexp expression for checking password strength",
   "main": "index.js",
   "scripts": {
