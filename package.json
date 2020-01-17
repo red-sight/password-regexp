@@ -10,7 +10,12 @@
     "type": "git",
     "url": "https://github.com/red-sight/password-regexp.git"
   },
-  "keywords": ["regexp", "password", "validation", "nodejs"],
+  "keywords": [
+    "regexp",
+    "password",
+    "validation",
+    "nodejs"
+  ],
   "author": "Dmitry Malakhov malahov.dmitry@gmail.com",
   "license": "ISC",
   "bugs": {
@@ -18,7 +23,13 @@
   },
   "homepage": "https://github.com/red-sight/password-regexp",
   "devDependencies": {
-    "mocha": "*",
-    "chai": "*"
+    "chai": "*",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "mocha": "*"
   }
 }
